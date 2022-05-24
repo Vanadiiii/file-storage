@@ -1,0 +1,92 @@
+{
+	"info": {
+		"_postman_id": "911fefcf-0f21-45eb-a6fc-24a75c003d1c",
+		"name": "file-storage",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "save files",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file1",
+							"type": "file",
+							"src": "/Users/MatveevIV/Desktop/Screen Shot 2022-05-23 at 11.57.10.png"
+						},
+						{
+							"key": "file2",
+							"type": "file",
+							"src": "/Users/MatveevIV/Desktop/Screen Shot 2022-05-23 at 11.57.10.png",
+							"disabled": true
+						},
+						{
+							"key": "file3",
+							"type": "file",
+							"src": "/Users/MatveevIV/Desktop/Screen Shot 2022-05-23 at 11.57.10.png",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/files",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"files"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get by id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "someImage",
+							"type": "file",
+							"src": "/Users/MatveevIV/Desktop/Screen Shot 2022-05-23 at 11.57.10.png"
+						},
+						{
+							"key": "anotherImage",
+							"type": "file",
+							"src": "/Users/MatveevIV/Desktop/Screen Shot 2022-05-23 at 11.57.10.png"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/files/776ef72b-bc7c-44a5-9ef4-305cbc875dcb",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"files",
+						"776ef72b-bc7c-44a5-9ef4-305cbc875dcb"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
